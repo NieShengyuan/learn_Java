@@ -1,6 +1,6 @@
 package com.sethnie.oo;
 /*
- * ²âÊÔ¼Ì³Ğ
+ * æµ‹è¯•ç»§æ‰¿
  * */
 
 public class a09TestExtends {
