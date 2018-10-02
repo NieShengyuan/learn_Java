@@ -1,6 +1,6 @@
 /*
- * LinkedListÔö¸ÄÉ¾²é
- * (ÎÄ¼ş°üº¬Node.java)
+ * LinkedListå¢æ”¹åˆ æŸ¥
+ * (æ–‡ä»¶åŒ…å«Node.java)
  * */
 package com.sethnie.Tcollection;
 
@@ -18,7 +18,7 @@ public class a19TestLinkList {
 			first = n;
 			last = n;
 		}else {
-			//Ö±½ÓÍùlast½ÚµãºóÔö¼ÓĞÂµÄ½Úµã
+			//ç›´æ¥å¾€lastèŠ‚ç‚¹åå¢åŠ æ–°çš„èŠ‚ç‚¹
 			n.setPrevious(last);
 			n.setObj(obj);
 			n.setNext(null);
@@ -55,10 +55,18 @@ public class a19TestLinkList {
 	public Node node(int index ) {
 		Node temp = null;
 		RangeCheck(index);
+		//ä¼˜åŒ–æŸ¥è¯¢èŠ‚ç‚¹çš„é¡ºåº
 		if(first!=null) {
-			temp = first;
-			for(int i=0;i<index;i++) {
-				temp = temp.next;
+			if(index < (size >> 1)) {
+				temp = first;
+				for (int i = 0; i < index; i++) {
+					temp = temp.next;
+				}
+			}else {
+				temp = last;
+				for(int i = size-1;i>index;i--) {
+					temp = temp.previous;
+				}
 			}
 		}
 		return temp;
