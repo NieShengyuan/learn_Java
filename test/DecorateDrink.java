@@ -94,6 +94,14 @@ class Suger extends Decorate{
 
 
 
+/*
+原味咖啡加了Suger-->20.0
+原味咖啡加了牛奶-->40.0
+原味咖啡加了Suger加了牛奶-->80.0
+
+*/
+
+
 
 
 
